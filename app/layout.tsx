@@ -10,7 +10,7 @@ const _geistMono = Geist_Mono({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Heavy Duty Solutions',
   description:
-    'Manufacturing, fabrication, steel structures laser cutting, e.t.c',
+    'Heavy Duty Solutions specializes in prefabricated buildings, steel structures, CNC laser cutting, metal works, booths, kiosks, and outdoor furniture. Home of the innovative Hydro Master floating hydro-kinetic turbine.',
   icons: {
     icon: [
       {
@@ -23,12 +23,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Heavy Duty Solutions',
     description:
-      'Manufacturing, fabrication, steel structures laser cutting, e.t.c',
-    url: 'https://heavydutysolutions.co.zm', // Update with your actual domain
+      'Prefabricated buildings, steel structures, CNC laser cutting, metal works, and the innovative Hydro Master turbine. Quality manufacturing solutions in Zambia.',
+    url: 'https://heavydutysolutions.co.zm',
     siteName: 'Heavy Duty Solutions',
     images: [
       {
-        url: '/HDS_logo.png', // This is the image that appears when shared
+        url: '/HDS_logo.png',
         width: 1200,
         height: 630,
         alt: 'Heavy Duty Solutions',
@@ -41,8 +41,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Heavy Duty Solutions',
     description:
-      "Innovative power production solutions addressing Zambia's energy crisis",
-    images: ['/HDS_logo.png'], // Twitter also uses this image
+      'Quality manufacturing and fabrication solutions in Zambia. Prefabricated buildings, steel structures, CNC cutting, and the Hydro Master turbine.',
+    images: ['/HDS_logo.png'],
   },
 }
 

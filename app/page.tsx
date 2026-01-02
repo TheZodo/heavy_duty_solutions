@@ -14,7 +14,6 @@ import { Textarea } from '@/components/ui/textarea'
 import { Switch } from '@/components/ui/switch'
 import { Label } from '@/components/ui/label'
 import { ArrowRight } from 'lucide-react'
-import { PowerArtifacts } from '@/components/power-artifacts'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import Image from 'next/image'
@@ -36,13 +35,11 @@ export default function Home() {
       }\n\nQuestion/Inquiry:\n${question}`
     )
 
-    window.location.href = `mailto:malaizyo@sonka.io?subject=${subject}&body=${body}`
+    window.location.href = `mailto:heavydutysolutions.co.zm?subject=${subject}&body=${body}`
   }
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <PowerArtifacts />
-
       <Navbar activePage="home" />
 
       {/* Hero Section */}
@@ -53,32 +50,32 @@ export default function Home() {
             <div>
               <div className="inline-block px-3 py-1 bg-primary/10 border border-primary/30 rounded-full mb-6">
                 <span className="text-sm font-medium text-primary">
-                  Powering Zambia Forward
+                  Built to Last, Crafted with Precision
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance mb-6">
-                Innovative{' '}
-                <span className="text-primary">Energy Solutions</span> for a
-                Brighter Future
+                Industrial{' '}
+                <span className="text-primary">Manufacturing Solutions</span>{' '}
+                for Every Need
               </h1>
               <p className="text-lg text-foreground/70 text-balance mb-8">
-                Zambia's Power Initiative is leading the transformation of
-                energy production across the nation. Through cutting-edge
-                technology and local expertise, we're building a sustainable
-                power infrastructure that empowers communities.
+                Heavy Duty Solutions specializes in prefabricated buildings,
+                steel structures, CNC laser cutting, and metal fabrication. From
+                corporate projects to private ventures, we deliver quality
+                craftsmanship that stands the test of time.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/careers">
+                <Link href="/projects">
                   <Button
                     size="lg"
                     className="bg-primary hover:bg-primary/90 text-primary-foreground"
                   >
-                    Join Our Mission
+                    View Our Projects
                   </Button>
                 </Link>
                 <a href="#contact">
                   <Button size="lg" variant="outline">
-                    Learn More
+                    Get a Quote
                   </Button>
                 </a>
               </div>
@@ -104,11 +101,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
-              Featured Projects
+              Our Services & Projects
             </h2>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-              Discover our key initiatives transforming Zambia's energy
-              landscape
+              Discover our comprehensive range of manufacturing and fabrication
+              solutions
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
@@ -140,43 +137,31 @@ export default function Home() {
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground"
               >
-                Explore All Projects
+                Explore All Services
               </Button>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Stats Section - Our Goals */}
+      {/* Stats Section - Our Achievements */}
       <section id="impact" className="py-20 md:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5 pointer-events-none">
-          <div
-            className="w-full h-full"
-            style={{
-              backgroundImage: `url('/images/artifacts/square_panel.png')`,
-              backgroundRepeat: 'repeat',
-              backgroundSize: '100px 100px', // Adjust size as needed for square panels
-              opacity: 0.5, // Subtle effect
-            }}
-          />
-        </div>
-
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
-              Our Goals
+              Our Track Record
             </h2>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-              Zambia's power production targets for sustainable energy
-              transformation
+              Delivering excellence in manufacturing and fabrication across
+              Zambia
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { number: '2M+', label: 'Households Reached' },
-              { number: '1GW', label: 'Capacity Deployed' },
-              { number: '15K', label: 'Jobs Created' },
-              { number: '40%', label: 'Carbon Reduction' },
+              { number: '200+', label: 'Projects Completed' },
+              { number: '50+', label: 'Corporate Clients' },
+              { number: '15+', label: 'Years Experience' },
+              { number: '100%', label: 'Quality Commitment' },
             ].map((stat, i) => (
               <div
                 key={i}
@@ -192,7 +177,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Us Section - Sliding Effect */}
+      {/* Contact Us Section */}
       <section
         id="contact"
         className="relative py-20 md:py-32 bg-card/50 border-t border-border"
@@ -204,8 +189,8 @@ export default function Home() {
               Get In Touch
             </h2>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-              Have questions or want to collaborate? We'd love to hear from you.
-              Reach out to the Zambian Power Initiative team.
+              Have a project in mind or need a quote? We'd love to hear from
+              you. Reach out to the Heavy Duty Solutions team.
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start max-w-5xl mx-auto">
@@ -279,12 +264,10 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="question">
-                      What would you like to ask about?
-                    </Label>
+                    <Label htmlFor="question">Tell us about your project</Label>
                     <Textarea
                       id="question"
-                      placeholder="Tell us about your inquiry..."
+                      placeholder="Describe your project requirements..."
                       value={question}
                       onChange={(e) => setQuestion(e.target.value)}
                       required
@@ -327,26 +310,30 @@ export default function Home() {
       <section className="py-20 md:py-32 bg-linear-to-r from-secondary via-primary to-accent text-primary-foreground">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">
-            Be Part of Zambia's Energy Future
+            Ready to Build Something Great?
           </h2>
           <p className="text-lg text-balance mb-8 opacity-90">
-            Join us in building a sustainable, prosperous future powered by
-            innovation and local expertise
+            Partner with Heavy Duty Solutions for your next construction,
+            fabrication, or manufacturing project
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-primary-foreground hover:bg-primary-foreground/90 text-secondary"
-            >
-              Get Started Today
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 bg-transparent"
-            >
-              Contact Us
-            </Button>
+            <Link href="/projects">
+              <Button
+                size="lg"
+                className="bg-primary-foreground hover:bg-primary-foreground/90 text-secondary"
+              >
+                View Our Work
+              </Button>
+            </Link>
+            <a href="#contact">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 bg-transparent"
+              >
+                Contact Us
+              </Button>
+            </a>
           </div>
         </div>
       </section>

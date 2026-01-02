@@ -1,4 +1,4 @@
-import { Zap, Mail, Phone, MapPin } from 'lucide-react'
+import { Wrench, Mail, Phone, MapPin } from 'lucide-react'
 import Link from 'next/link'
 
 export function Footer() {
@@ -8,30 +8,39 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Zap className="w-5 h-5 text-primary" />
-              <span className="font-bold">Zambian Power Initiative</span>
+              <Wrench className="w-5 h-5 text-primary" />
+              <span className="font-bold">Heavy Duty Solutions</span>
             </div>
             <p className="text-secondary-foreground/70 text-sm">
-              Powering the nation, one solution at a time.
+              Quality manufacturing and fabrication solutions for every project.
             </p>
           </div>
           <div>
-            <h3 className="font-semibold mb-4">Solutions</h3>
+            <h3 className="font-semibold mb-4">Services</h3>
             <ul className="space-y-2 text-sm text-secondary-foreground/70">
               <li>
-                <a href="#" className="hover:text-primary transition">
-                  Renewable Energy
-                </a>
+                <Link
+                  href="/projects/prefabricated-buildings"
+                  className="hover:text-primary transition"
+                >
+                  Prefabricated Buildings
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition">
-                  Smart Grid
-                </a>
+                <Link
+                  href="/projects/steel-structures"
+                  className="hover:text-primary transition"
+                >
+                  Steel Structures
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition">
-                  Infrastructure
-                </a>
+                <Link
+                  href="/projects/cnc-laser-cutting"
+                  className="hover:text-primary transition"
+                >
+                  CNC Laser Cutting
+                </Link>
               </li>
             </ul>
           </div>
@@ -44,9 +53,12 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition">
-                  Blog
-                </a>
+                <Link
+                  href="/projects"
+                  className="hover:text-primary transition"
+                >
+                  Projects
+                </Link>
               </li>
               <li>
                 <Link href="/careers" className="hover:text-primary transition">
@@ -61,19 +73,19 @@ export function Footer() {
               <li className="flex items-start gap-2">
                 <Mail className="w-4 h-4 mt-0.5 text-primary shrink-0" />
                 <a
-                  href="mailto:info@zpi.zm"
+                  href="mailto:heavydutysolutions.co.zm"
                   className="hover:text-primary transition"
                 >
-                  info@zpi.zm
+                  heavydutysolutions.co.zm
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <Phone className="w-4 h-4 mt-0.5 text-primary shrink-0" />
                 <a
-                  href="tel:+260977456789"
+                  href="tel:+260763562929"
                   className="hover:text-primary transition"
                 >
-                  +260 (977) 456 789
+                  +260 763 562 929
                 </a>
               </li>
               <li className="flex items-start gap-2">
@@ -85,11 +97,10 @@ export function Footer() {
         </div>
         <div className="border-t border-secondary-foreground/20 pt-8">
           <p className="text-center text-sm text-secondary-foreground/60">
-            © 2025 Zambian Power Initiative. Powering Zambia's future.
+            © 2025 Heavy Duty Solutions. Built to last, crafted with precision.
           </p>
         </div>
       </div>
     </footer>
   )
 }
-

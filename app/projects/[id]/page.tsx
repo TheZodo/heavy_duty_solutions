@@ -3,7 +3,7 @@ import { use } from 'react'
 
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { ArrowLeft, CheckCircle2, MapPin, PowerIcon } from 'lucide-react'
+import { ArrowLeft, CheckCircle2, MapPin, Gauge } from 'lucide-react'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import Link from 'next/link'
@@ -14,8 +14,6 @@ export default function ProjectDetailPage(props: {
   params: Promise<{ id: string }>
 }) {
   const params = use(props.params)
-  // console.log('malaizyo the projects ', projects)
-  console.log('malaizyo the params ', params)
   const project = projects.find((p) => p.id === params.id)
 
   if (!project) {
@@ -46,7 +44,7 @@ export default function ProjectDetailPage(props: {
             <Card className="bg-background border-border">
               <CardHeader className="pb-3">
                 <div className="flex items-center gap-2">
-                  <PowerIcon className="w-5 h-5 text-primary" />
+                  <Gauge className="w-5 h-5 text-primary" />
                   <p className="text-sm text-foreground/60">Capacity</p>
                 </div>
               </CardHeader>
@@ -87,7 +85,7 @@ export default function ProjectDetailPage(props: {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold mb-8">Key Highlights</h2>
+              <h2 className="text-3xl font-bold mb-8">Key Features</h2>
               <ul className="space-y-4">
                 {project.details.map((detail, index) => (
                   <li key={index} className="flex gap-4">
@@ -115,26 +113,26 @@ export default function ProjectDetailPage(props: {
                   </div>
                   <div className="border-t border-border pt-6">
                     <h3 className="font-semibold mb-4">
-                      Ready to get involved?
+                      Interested in this service?
                     </h3>
                     <div className="space-y-3">
-                      <Link href="/careers">
+                      <a href="/#contact">
                         <Button
                           size="lg"
                           className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
                         >
-                          Join Our Mission
+                          Get a Quote
                         </Button>
-                      </Link>
-                      <a href="/#contact">
+                      </a>
+                      <Link href="/about">
                         <Button
                           size="lg"
                           variant="outline"
                           className="w-full bg-transparent"
                         >
-                          Contact Us
+                          Learn About Us
                         </Button>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </CardContent>
@@ -147,7 +145,7 @@ export default function ProjectDetailPage(props: {
       {/* Related Projects */}
       <section className="py-20 md:py-32 bg-card/50 border-t border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12">Other Projects</h2>
+          <h2 className="text-3xl font-bold mb-12">Other Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects
               .filter((p) => p.id !== project.id)
@@ -172,7 +170,7 @@ export default function ProjectDetailPage(props: {
                         className="w-full bg-transparent"
                         size="sm"
                       >
-                        View Project
+                        View Details
                       </Button>
                     </CardContent>
                   </Card>
@@ -186,26 +184,28 @@ export default function ProjectDetailPage(props: {
       <section className="py-20 md:py-32 bg-linear-to-r from-secondary via-primary to-accent text-primary-foreground">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">
-            Be Part of This Project
+            Ready to Start Your Project?
           </h2>
           <p className="text-lg text-balance mb-8 opacity-90">
-            Interested in contributing to {project.title}? Join our mission to
-            power Zambia.
+            Contact us today to discuss {project.title} or any of our other
+            manufacturing and fabrication services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-primary-foreground hover:bg-primary-foreground/90 text-secondary"
-            >
-              Get Involved
-            </Button>
-            <Link href="/careers">
+            <a href="/#contact">
+              <Button
+                size="lg"
+                className="bg-primary-foreground hover:bg-primary-foreground/90 text-secondary"
+              >
+                Get a Quote
+              </Button>
+            </a>
+            <Link href="/projects">
               <Button
                 size="lg"
                 variant="outline"
                 className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 bg-transparent"
               >
-                View Careers
+                View All Services
               </Button>
             </Link>
           </div>

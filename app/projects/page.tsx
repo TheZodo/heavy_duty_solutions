@@ -24,11 +24,12 @@ export default function ProjectsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance mb-6">
-              Our <span className="text-primary">Power Projects</span>
+              Our <span className="text-primary">Services & Projects</span>
             </h1>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-              Explore Zambia's transformative energy initiatives, from renewable
-              farms to smart grid infrastructure.
+              Explore our comprehensive range of manufacturing, fabrication, and
+              innovative solutions including the revolutionary Hydro Master
+              turbine.
             </p>
           </div>
         </div>
@@ -90,11 +91,12 @@ export default function ProjectsPage() {
       <section className="py-20 md:py-32 bg-linear-to-r from-secondary via-primary to-accent text-primary-foreground">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">
-            Get Involved in Our Projects
+            Have a Project in Mind?
           </h2>
           <p className="text-lg text-balance mb-8 opacity-90">
-            Whether you're a potential partner, investor, or community member,
-            there are many ways to contribute.
+            Whether you need prefabricated buildings, steel structures, or
+            custom metal fabrication, we're ready to help bring your vision to
+            life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/#contact">
@@ -102,16 +104,16 @@ export default function ProjectsPage() {
                 size="lg"
                 className="bg-primary-foreground hover:bg-primary-foreground/90 text-secondary"
               >
-                Contact Us
+                Get a Quote
               </Button>
             </Link>
-            <Link href="/careers">
+            <Link href="/about">
               <Button
                 size="lg"
                 variant="outline"
                 className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 bg-transparent"
               >
-                Join Our Team
+                Learn About Us
               </Button>
             </Link>
           </div>

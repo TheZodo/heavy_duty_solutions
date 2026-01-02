@@ -1,46 +1,46 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Zambian Energy Theme - Warm earthy tones with modern energy accents */
+  /* Heavy Duty Solutions Theme - Industrial Orange and Lime Green */
   --background: oklch(0.98 0 0);
   --foreground: oklch(0.15 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.15 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.15 0 0);
-  /* <CHANGE> Primary color: Warm golden-orange representing African sun and energy */
-  --primary: oklch(0.58 0.18 47);
+  /* Primary color: #FC8133 - Vibrant Industrial Orange */
+  --primary: oklch(0.72 0.16 45);
   --primary-foreground: oklch(1 0 0);
-  /* <CHANGE> Secondary: Deep earthy brown representing natural resources */
-  --secondary: oklch(0.35 0.08 60);
+  /* Secondary: Black/Dark tones */
+  --secondary: oklch(0.2 0 0);
   --secondary-foreground: oklch(0.98 0 0);
   --muted: oklch(0.92 0 0);
   --muted-foreground: oklch(0.5 0 0);
-  /* <CHANGE> Accent: Vibrant teal representing innovation and technology */
-  --accent: oklch(0.65 0.18 180);
-  --accent-foreground: oklch(0.98 0 0);
+  /* Accent: #B8DE15 - Lime Green */
+  --accent: oklch(0.82 0.18 120);
+  --accent-foreground: oklch(0.15 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
   --border: oklch(0.92 0 0);
   --input: oklch(0.92 0 0);
-  --ring: oklch(0.58 0.18 47);
-  --chart-1: oklch(0.58 0.18 47);
-  --chart-2: oklch(0.65 0.18 180);
-  --chart-3: oklch(0.35 0.08 60);
-  --chart-4: oklch(0.75 0.15 40);
-  --chart-5: oklch(0.45 0.12 200);
+  --ring: oklch(0.72 0.16 45);
+  --chart-1: oklch(0.72 0.16 45);
+  --chart-2: oklch(0.82 0.18 120);
+  --chart-3: oklch(0.2 0 0);
+  --chart-4: oklch(0.75 0.12 45);
+  --chart-5: oklch(0.7 0.15 120);
   --radius: 0.625rem;
   --sidebar: oklch(0.98 0 0);
   --sidebar-foreground: oklch(0.15 0 0);
-  --sidebar-primary: oklch(0.58 0.18 47);
+  --sidebar-primary: oklch(0.72 0.16 45);
   --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.65 0.18 180);
-  --sidebar-accent-foreground: oklch(0.98 0 0);
+  --sidebar-accent: oklch(0.82 0.18 120);
+  --sidebar-accent-foreground: oklch(0.15 0 0);
   --sidebar-border: oklch(0.92 0 0);
-  --sidebar-ring: oklch(0.58 0.18 47);
+  --sidebar-ring: oklch(0.72 0.16 45);
 }
 
 .dark {
@@ -50,40 +50,40 @@
   --card-foreground: oklch(0.95 0 0);
   --popover: oklch(0.18 0 0);
   --popover-foreground: oklch(0.95 0 0);
-  /* <CHANGE> Dark mode primary: Vibrant golden-orange */
-  --primary: oklch(0.65 0.21 47);
+  /* Dark mode primary: Vibrant Orange */
+  --primary: oklch(0.75 0.18 45);
   --primary-foreground: oklch(0.12 0 0);
-  /* <CHANGE> Dark mode secondary: Lighter earthy brown */
-  --secondary: oklch(0.45 0.1 60);
+  /* Dark mode secondary: Lighter dark */
+  --secondary: oklch(0.3 0 0);
   --secondary-foreground: oklch(0.95 0 0);
   --muted: oklch(0.28 0 0);
   --muted-foreground: oklch(0.65 0 0);
-  /* <CHANGE> Dark mode accent: Bright teal */
-  --accent: oklch(0.7 0.22 180);
+  /* Dark mode accent: Bright Lime Green */
+  --accent: oklch(0.85 0.2 120);
   --accent-foreground: oklch(0.12 0 0);
   --destructive: oklch(0.396 0.141 25.723);
   --destructive-foreground: oklch(0.637 0.237 25.331);
   --border: oklch(0.28 0 0);
   --input: oklch(0.28 0 0);
-  --ring: oklch(0.65 0.21 47);
-  --chart-1: oklch(0.65 0.21 47);
-  --chart-2: oklch(0.7 0.22 180);
-  --chart-3: oklch(0.45 0.1 60);
-  --chart-4: oklch(0.8 0.18 40);
-  --chart-5: oklch(0.55 0.15 200);
+  --ring: oklch(0.75 0.18 45);
+  --chart-1: oklch(0.75 0.18 45);
+  --chart-2: oklch(0.85 0.2 120);
+  --chart-3: oklch(0.3 0 0);
+  --chart-4: oklch(0.8 0.14 45);
+  --chart-5: oklch(0.75 0.17 120);
   --sidebar: oklch(0.15 0 0);
   --sidebar-foreground: oklch(0.95 0 0);
-  --sidebar-primary: oklch(0.65 0.21 47);
+  --sidebar-primary: oklch(0.75 0.18 45);
   --sidebar-primary-foreground: oklch(0.12 0 0);
-  --sidebar-accent: oklch(0.7 0.22 180);
+  --sidebar-accent: oklch(0.85 0.2 120);
   --sidebar-accent-foreground: oklch(0.12 0 0);
   --sidebar-border: oklch(0.28 0 0);
-  --sidebar-ring: oklch(0.65 0.21 47);
+  --sidebar-ring: oklch(0.75 0.18 45);
 }
 
 @theme inline {
-  --font-sans: "Geist", "Geist Fallback";
-  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
