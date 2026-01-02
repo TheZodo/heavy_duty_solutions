@@ -8,9 +8,9 @@ const _geist = Geist({ subsets: ['latin'] })
 const _geistMono = Geist_Mono({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Zambian Power Initiative - Powering the Nation',
+  title: 'Heavy Duty Solutions',
   description:
-    "Innovative power production solutions addressing Zambia's energy crisis",
+    'Manufacturing, fabrication, steel structures laser cutting, e.t.c',
   icons: {
     icon: [
       {
@@ -21,17 +21,17 @@ export const metadata: Metadata = {
     apple: '/HDS_logo.png',
   },
   openGraph: {
-    title: 'Zambian Power Initiative - Powering the Nation',
+    title: 'Heavy Duty Solutions',
     description:
-      "Innovative power production solutions addressing Zambia's energy crisis",
-    url: 'https://zpi.zm', // Update with your actual domain
-    siteName: 'Zambian Power Initiative',
+      'Manufacturing, fabrication, steel structures laser cutting, e.t.c',
+    url: 'https://heavydutysolutions.co.zm', // Update with your actual domain
+    siteName: 'Heavy Duty Solutions',
     images: [
       {
-        url: '/apple-icon.png', // This is the image that appears when shared
+        url: '/HDS_logo.png', // This is the image that appears when shared
         width: 1200,
         height: 630,
-        alt: 'Zambian Power Initiative - Powering Zambia Forward',
+        alt: 'Heavy Duty Solutions',
       },
     ],
     locale: 'en_US',
@@ -39,10 +39,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zambian Power Initiative - Powering the Nation',
+    title: 'Heavy Duty Solutions',
     description:
       "Innovative power production solutions addressing Zambia's energy crisis",
-    images: ['/apple-icon.png'], // Twitter also uses this image
+    images: ['/HDS_logo.png'], // Twitter also uses this image
   },
 }
 

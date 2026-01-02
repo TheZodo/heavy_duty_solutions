@@ -72,7 +72,7 @@ export function Navbar({ activePage }: NavbarProps) {
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src={'/images/HDS_logo.png'}
+              src={'/HDS_logo.png'}
               alt={'HDS Logo'}
               width={100}
               height={60}
