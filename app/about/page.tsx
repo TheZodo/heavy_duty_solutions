@@ -69,8 +69,8 @@ export default function AboutPage() {
                 outdoor furniture, and specialized metal works.
               </p>
               <p className="text-lg text-foreground/70">
-                Our flagship innovation, the Hydro Master turbine, represents
-                our commitment to sustainable solutions that harness Zambia's
+                Our flagship innovation, the Hydro Master, represents our
+                commitment to sustainable solutions that harness Zambia's
                 natural resources.
               </p>
             </div>

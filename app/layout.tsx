@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Heavy Duty Solutions',
     description:
-      'Prefabricated buildings, steel structures, CNC laser cutting, metal works, and the innovative Hydro Master turbine. Quality manufacturing solutions in Zambia.',
+      'Prefabricated buildings, steel structures, CNC laser cutting, metal works, and the innovative Hydro Master. Quality manufacturing solutions in Zambia.',
     url: 'https://heavydutysolutions.co.zm',
     siteName: 'Heavy Duty Solutions',
     images: [

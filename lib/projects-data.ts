@@ -1,7 +1,7 @@
 export const projects = [
   {
     id: 'hydro-master',
-    title: 'Hydro Master Turbine',
+    title: 'Hydro Master',
     shortDescription:
       'Floating hydro-kinetic turbine with self-propulsion capabilities',
     fullDescription:
