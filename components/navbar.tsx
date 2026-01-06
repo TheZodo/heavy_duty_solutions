@@ -74,12 +74,9 @@ export function Navbar({ activePage }: NavbarProps) {
             <Image
               src={'/HDS_logo.png'}
               alt={'HDS Logo'}
-              width={100}
+              width={200}
               height={60}
             />
-            <span className="text-xl font-bold text-primary">
-              Heavy Duty Solutions
-            </span>
           </Link>
           <div className="hidden md:flex items-center gap-8">
             <NavLinks />
