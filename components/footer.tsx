@@ -81,16 +81,32 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <Phone className="w-4 h-4 mt-0.5 text-primary shrink-0" />
-                <a
-                  href="tel:+260763562929"
-                  className="hover:text-primary transition"
-                >
-                  +260 763 562 929
-                </a>
+                <div className="flex flex-col gap-1">
+                  <a
+                    href="tel:+260763562929"
+                    className="hover:text-primary transition"
+                  >
+                    +260 763 562 929
+                  </a>
+                  <a
+                    href="tel:+260976220693"
+                    className="hover:text-primary transition"
+                  >
+                    +260 976 220 693
+                  </a>
+                  <a
+                    href="tel:+260979551172"
+                    className="hover:text-primary transition"
+                  >
+                    +260 979 551 172
+                  </a>
+                </div>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 text-primary shrink-0" />
-                <span>Lusaka, Zambia</span>
+                <span>
+                  Plotm396a/k Bayuni Road, Makeni main, Lusaka, Zambia
+                </span>
               </li>
             </ul>
           </div>
