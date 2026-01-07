@@ -138,7 +138,7 @@ export default function CareersPage() {
                 interested in hearing from talented individuals. Feel free to
                 send us your CV for future opportunities.
               </p>
-              <a href="mailto:heavydutysolutions.co.zm">
+              <a href="mailto:heavydutyinso@gmail.com">
                 <Button className="bg-primary hover:bg-primary/90 text-primary-foreground btn-industrial">
                   Send Your CV
                 </Button>
@@ -171,10 +171,10 @@ export default function CareersPage() {
             <p className="text-lg mb-6 text-white/90">
               Interested in future opportunities? Send your CV to{' '}
               <a
-                href="mailto:heavydutysolutions.co.zm"
+                href="mailto:heavydutyinso@gmail.com"
                 className="font-semibold text-primary hover:underline"
               >
-                heavydutysolutions.co.zm
+                heavydutyinso@gmail.com
               </a>
             </p>
             <p className="text-white/80">
