@@ -42,23 +42,31 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground">
       <Navbar activePage="home" />
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-br from-accent/20 via-secondary/10 to-primary/20"></div>
+      {/* Hero Section with Parallax Background */}
+      <section 
+        className="relative min-h-[90vh] flex items-center parallax-hero"
+        style={{
+          backgroundImage: 'url(/images/industrial_background.jpg)',
+        }}
+      >
+        {/* Dark overlay for text legibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30"></div>
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block px-3 py-1 bg-accent/10 border border-accent/30 rounded-full mb-6">
-                <span className="text-sm font-medium text-accent">
+              <div className="inline-block px-4 py-1.5 glass-card rounded-full mb-6 border border-primary/30">
+                <span className="text-sm font-medium text-primary">
                   Built to Last, Crafted with Precision
                 </span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance mb-6 text-white text-shadow-industrial">
                 Industrial{' '}
-                <span className="text-primary">Manufacturing Solutions</span>{' '}
+                <span className="text-primary text-shadow-glow">Manufacturing Solutions</span>{' '}
                 for Every Need
               </h1>
-              <p className="text-lg text-foreground/70 text-balance mb-8">
+              <p className="text-lg text-white/90 text-balance mb-8 text-shadow-subtle">
                 Heavy Duty Solutions specializes in prefabricated buildings,
                 steel structures, CNC laser cutting, and metal fabrication. From
                 corporate projects to private ventures, we deliver quality
@@ -68,42 +76,56 @@ export default function Home() {
                 <Link href="/projects">
                   <Button
                     size="lg"
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground btn-industrial glow-green-subtle"
                   >
                     View Our Projects
                   </Button>
                 </Link>
                 <a href="#contact">
-                  <Button size="lg" variant="outline">
+                  <Button 
+                    size="lg" 
+                    variant="outline"
+                    className="border-white/50 text-white hover:bg-white/10 hover:border-primary bg-black/30 backdrop-blur-sm"
+                  >
                     Get a Quote
                   </Button>
                 </a>
               </div>
             </div>
-            <div className="relative h-64 md:h-96 lg:h-full">
+            <div className="relative h-64 md:h-96 lg:h-[500px] hidden lg:block">
+              <div className="absolute inset-0 glow-green rounded-2xl opacity-30"></div>
               <Image
                 src="/images/oie_transparent.png"
                 alt="Zambia Power Production - Solar, Wind, Hydro, and Nuclear Energy"
                 fill
-                className="object-contain"
+                className="object-contain drop-shadow-2xl"
                 priority
               />
             </div>
           </div>
         </div>
+        
+        {/* Gradient fade to next section */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
       </section>
 
-      {/* Projects Section */}
+      {/* Projects Section with Parallax */}
       <section
         id="features"
-        className="py-20 md:py-32 bg-card/50 border-t border-b border-border"
+        className="relative py-20 md:py-32 parallax-section"
+        style={{
+          backgroundImage: 'url(/images/industrial-metallic-parallax-extension.jpg)',
+        }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/75"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance text-white text-shadow-industrial">
               Our Services & Projects
             </h2>
-            <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+            <p className="text-lg text-white/80 max-w-2xl mx-auto">
               Discover our comprehensive range of manufacturing and fabrication
               solutions
             </p>
@@ -111,20 +133,20 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {projects.slice(0, 3).map((project) => (
               <Link key={project.id} href={`/projects/${project.id}`}>
-                <Card className="bg-background border-border hover:shadow-lg hover:border-primary/50 transition-all h-full cursor-pointer">
+                <Card className="glass-card card-industrial hover:shadow-lg transition-all h-full cursor-pointer group">
                   <CardHeader>
-                    <CardTitle className="text-lg">{project.title}</CardTitle>
-                    <CardDescription>
+                    <CardTitle className="text-lg text-white group-hover:text-primary transition-colors">{project.title}</CardTitle>
+                    <CardDescription className="text-white/70">
                       {project.shortDescription}
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-foreground/70 mb-4">
+                    <p className="text-sm text-white/60 mb-4">
                       {project.impact}
                     </p>
                     <div className="flex items-center text-primary hover:gap-2 transition-all">
                       <span className="text-sm font-medium">View Details</span>
-                      <ArrowRight className="w-4 h-4 ml-1" />
+                      <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </CardContent>
                 </Card>
@@ -135,7 +157,7 @@ export default function Home() {
             <Link href="/projects">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground btn-industrial"
               >
                 Explore All Services
               </Button>
@@ -145,13 +167,15 @@ export default function Home() {
       </section>
 
       {/* Stats Section - Our Achievements */}
-      <section id="impact" className="py-20 md:py-32 relative overflow-hidden">
+      <section id="impact" className="py-20 md:py-32 relative overflow-hidden bg-background">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance text-white">
               Our Track Record
             </h2>
-            <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+            <p className="text-lg text-white/70 max-w-2xl mx-auto">
               Delivering excellence in manufacturing and fabrication across
               Zambia
             </p>
@@ -165,39 +189,49 @@ export default function Home() {
             ].map((stat, i) => (
               <div
                 key={i}
-                className="text-center p-6 rounded-xl bg-linear-to-br from-primary/10 to-accent/10 border border-primary/20"
+                className="text-center p-6 rounded-xl glass-card card-industrial"
               >
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-2 text-shadow-glow">
                   {stat.number}
                 </div>
-                <p className="text-foreground/70">{stat.label}</p>
+                <p className="text-white/80">{stat.label}</p>
               </div>
             ))}
           </div>
         </div>
+        
+        {/* Decorative divider */}
+        <div className="absolute bottom-0 left-0 right-0 h-px divider-industrial"></div>
       </section>
 
-      {/* Contact Us Section */}
+      {/* Contact Us Section with Parallax */}
       <section
         id="contact"
-        className="relative py-20 md:py-32 bg-card/50 border-t border-border"
-        style={{ position: 'relative', zIndex: 21 }}
+        className="relative py-20 md:py-32 parallax-section"
+        style={{
+          backgroundImage: 'url(/images/industrial-metallic-parallax-extension.jpg)',
+          backgroundPositionY: '30%',
+          zIndex: 21,
+        }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/80"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance text-white text-shadow-industrial">
               Get In Touch
             </h2>
-            <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+            <p className="text-lg text-white/80 max-w-2xl mx-auto">
               Have a project in mind or need a quote? We'd love to hear from
               you. Reach out to the Heavy Duty Solutions team.
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start max-w-5xl mx-auto">
-            <Card className="bg-background border-border">
+            <Card className="glass-card-strong border-primary/20">
               <CardHeader>
-                <CardTitle>Contact Us</CardTitle>
-                <CardDescription>
+                <CardTitle className="text-white">Contact Us</CardTitle>
+                <CardDescription className="text-white/70">
                   Fill out the form below and we'll get back to you as soon as
                   possible.
                 </CardDescription>
@@ -205,7 +239,7 @@ export default function Home() {
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Name</Label>
+                    <Label htmlFor="name" className="text-white">Name</Label>
                     <Input
                       id="name"
                       type="text"
@@ -213,13 +247,14 @@ export default function Home() {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       required
+                      className="bg-black/50 border-white/20 text-white placeholder:text-white/50 focus:border-primary"
                     />
                   </div>
                   <div className="space-y-3">
-                    <Label>
+                    <Label className="text-white">
                       I am a{contactType === 'individual' ? 'n' : ''}
                     </Label>
-                    <div className="flex items-center gap-4 p-4 rounded-lg border border-border bg-card/50">
+                    <div className="flex items-center gap-4 p-4 rounded-lg border border-white/20 bg-black/30">
                       <div className="flex items-center gap-2">
                         {contactType === 'individual' ? (
                           <Image
@@ -238,7 +273,7 @@ export default function Home() {
                             className="object-contain transition-all duration-300 shrink-0"
                           />
                         )}
-                        <span className="text-sm font-medium">
+                        <span className="text-sm font-medium text-white">
                           {contactType === 'individual'
                             ? 'Individual'
                             : 'Company'}
@@ -246,7 +281,7 @@ export default function Home() {
                       </div>
                       <div className="flex-1 flex justify-end">
                         <div className="flex items-center gap-3">
-                          <span className="text-sm text-muted-foreground">
+                          <span className="text-sm text-white/60">
                             Individual
                           </span>
                           <Switch
@@ -256,7 +291,7 @@ export default function Home() {
                             }
                             className="scale-125"
                           />
-                          <span className="text-sm text-muted-foreground">
+                          <span className="text-sm text-white/60">
                             Company
                           </span>
                         </div>
@@ -264,7 +299,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="question">Tell us about your project</Label>
+                    <Label htmlFor="question" className="text-white">Tell us about your project</Label>
                     <Textarea
                       id="question"
                       placeholder="Describe your project requirements..."
@@ -272,12 +307,13 @@ export default function Home() {
                       onChange={(e) => setQuestion(e.target.value)}
                       required
                       rows={5}
+                      className="bg-black/50 border-white/20 text-white placeholder:text-white/50 focus:border-primary"
                     />
                   </div>
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground btn-industrial"
                   >
                     Send Message
                   </Button>
@@ -286,6 +322,7 @@ export default function Home() {
             </Card>
             <div className="hidden lg:flex items-center justify-center sticky top-24">
               <div className="relative w-full max-w-md aspect-square">
+                <div className="absolute inset-0 glow-green rounded-full opacity-20"></div>
                 <Image
                   src={
                     contactType === 'individual'
@@ -298,7 +335,7 @@ export default function Home() {
                       : 'Lightbulb on - Company'
                   }
                   fill
-                  className="object-contain transition-opacity duration-300"
+                  className="object-contain transition-opacity duration-300 drop-shadow-2xl"
                 />
               </div>
             </div>
@@ -307,12 +344,14 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-32 ext-primary-foreground">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">
+      <section className="py-20 md:py-32 bg-background relative">
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent"></div>
+        
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance text-white">
             Ready to Build Something Great?
           </h2>
-          <p className="text-lg text-balance mb-8 opacity-90">
+          <p className="text-lg text-balance mb-8 text-white/80">
             Partner with Heavy Duty Solutions for your next construction,
             fabrication, or manufacturing project
           </p>
@@ -320,7 +359,7 @@ export default function Home() {
             <Link href="/projects">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary/30 text-secondary"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground btn-industrial"
               >
                 View Our Work
               </Button>
@@ -329,7 +368,7 @@ export default function Home() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 bg-transparent"
+                className="border-white/30 text-white hover:bg-white/10 hover:border-primary bg-transparent"
               >
                 Contact Us
               </Button>
