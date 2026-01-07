@@ -43,16 +43,16 @@ export default function Home() {
       <Navbar activePage="home" />
 
       {/* Hero Section with Parallax Background */}
-      <section 
+      <section
         className="relative min-h-[90vh] flex items-center parallax-hero"
         style={{
           backgroundImage: 'url(/images/industrial_background.jpg)',
         }}
       >
         {/* Dark overlay for text legibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30"></div>
-        
+        <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/60 to-black/40"></div>
+        <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-black/30"></div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -63,7 +63,9 @@ export default function Home() {
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance mb-6 text-white text-shadow-industrial">
                 Industrial{' '}
-                <span className="text-primary text-shadow-glow">Manufacturing Solutions</span>{' '}
+                <span className="text-primary text-shadow-glow">
+                  Manufacturing Solutions
+                </span>{' '}
                 for Every Need
               </h1>
               <p className="text-lg text-white/90 text-balance mb-8 text-shadow-subtle">
@@ -82,8 +84,8 @@ export default function Home() {
                   </Button>
                 </Link>
                 <a href="#contact">
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     variant="outline"
                     className="border-white/50 text-white hover:bg-white/10 hover:border-primary bg-black/30 backdrop-blur-sm"
                   >
@@ -104,9 +106,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
+
         {/* Gradient fade to next section */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-background to-transparent"></div>
       </section>
 
       {/* Projects Section with Parallax */}
@@ -114,12 +116,13 @@ export default function Home() {
         id="features"
         className="relative py-20 md:py-32 parallax-section"
         style={{
-          backgroundImage: 'url(/images/industrial-metallic-parallax-extension.jpg)',
+          backgroundImage:
+            'url(/images/industrial-metallic-parallax-extension.jpg)',
         }}
       >
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/75"></div>
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance text-white text-shadow-industrial">
@@ -135,7 +138,9 @@ export default function Home() {
               <Link key={project.id} href={`/projects/${project.id}`}>
                 <Card className="glass-card card-industrial hover:shadow-lg transition-all h-full cursor-pointer group">
                   <CardHeader>
-                    <CardTitle className="text-lg text-white group-hover:text-primary transition-colors">{project.title}</CardTitle>
+                    <CardTitle className="text-lg text-white group-hover:text-primary transition-colors">
+                      {project.title}
+                    </CardTitle>
                     <CardDescription className="text-white/70">
                       {project.shortDescription}
                     </CardDescription>
@@ -167,9 +172,12 @@ export default function Home() {
       </section>
 
       {/* Stats Section - Our Achievements */}
-      <section id="impact" className="py-20 md:py-32 relative overflow-hidden bg-background">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
-        
+      <section
+        id="impact"
+        className="py-20 md:py-32 relative overflow-hidden bg-background"
+      >
+        <div className="absolute inset-0 bg-linear-to-br from-primary/5 via-transparent to-accent/5"></div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance text-white">
@@ -199,7 +207,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-        
+
         {/* Decorative divider */}
         <div className="absolute bottom-0 left-0 right-0 h-px divider-industrial"></div>
       </section>
@@ -209,14 +217,15 @@ export default function Home() {
         id="contact"
         className="relative py-20 md:py-32 parallax-section"
         style={{
-          backgroundImage: 'url(/images/industrial-metallic-parallax-extension.jpg)',
+          backgroundImage:
+            'url(/images/industrial-metallic-parallax-extension.jpg)',
           backgroundPositionY: '30%',
           zIndex: 21,
         }}
       >
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/80"></div>
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance text-white text-shadow-industrial">
@@ -239,7 +248,9 @@ export default function Home() {
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
-                    <Label htmlFor="name" className="text-white">Name</Label>
+                    <Label htmlFor="name" className="text-white">
+                      Name
+                    </Label>
                     <Input
                       id="name"
                       type="text"
@@ -291,15 +302,15 @@ export default function Home() {
                             }
                             className="scale-125"
                           />
-                          <span className="text-sm text-white/60">
-                            Company
-                          </span>
+                          <span className="text-sm text-white/60">Company</span>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="question" className="text-white">Tell us about your project</Label>
+                    <Label htmlFor="question" className="text-white">
+                      Tell us about your project
+                    </Label>
                     <Textarea
                       id="question"
                       placeholder="Describe your project requirements..."
@@ -345,8 +356,8 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="py-20 md:py-32 bg-background relative">
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent"></div>
-        
+        <div className="absolute inset-0 bg-linear-to-t from-primary/5 to-transparent"></div>
+
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance text-white">
             Ready to Build Something Great?

@@ -11,20 +11,23 @@ export default function CareersPage() {
       <Navbar activePage="careers" />
 
       {/* Hero Section with Parallax */}
-      <section 
+      <section
         className="relative min-h-[60vh] flex items-center parallax-hero"
         style={{
           backgroundImage: 'url(/images/industrial_background.jpg)',
         }}
       >
         {/* Dark overlay for text legibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/60"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40"></div>
-        
+        <div className="absolute inset-0 bg-linear-to-r from-black/85 via-black/70 to-black/60"></div>
+        <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-black/40"></div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 relative z-10">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance mb-6 text-white text-shadow-industrial">
-              Join <span className="text-primary text-shadow-glow">Heavy Duty Solutions</span>
+              Join{' '}
+              <span className="text-primary text-shadow-glow">
+                Heavy Duty Solutions
+              </span>
             </h1>
             <p className="text-lg md:text-xl text-white/90 text-balance mb-8 text-shadow-subtle">
               Be part of a team that's shaping Zambia's manufacturing and
@@ -33,8 +36,8 @@ export default function CareersPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/about">
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   variant="outline"
                   className="border-white/50 text-white hover:bg-white/10 hover:border-primary bg-black/30 backdrop-blur-sm"
                 >
@@ -44,21 +47,22 @@ export default function CareersPage() {
             </div>
           </div>
         </div>
-        
+
         {/* Gradient fade to next section */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-background to-transparent"></div>
       </section>
 
       {/* Why Join Us with Parallax */}
-      <section 
+      <section
         className="relative py-20 md:py-32 parallax-section"
         style={{
-          backgroundImage: 'url(/images/industrial-metallic-parallax-extension.jpg)',
+          backgroundImage:
+            'url(/images/industrial-metallic-parallax-extension.jpg)',
         }}
       >
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/80"></div>
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance text-white text-shadow-industrial">
@@ -95,7 +99,9 @@ export default function CareersPage() {
               <Card key={i} className="glass-card card-industrial">
                 <CardHeader>
                   <benefit.icon className="w-8 h-8 text-primary mb-2" />
-                  <CardTitle className="text-lg text-white">{benefit.title}</CardTitle>
+                  <CardTitle className="text-lg text-white">
+                    {benefit.title}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-white/70 text-sm">{benefit.desc}</p>
@@ -108,8 +114,8 @@ export default function CareersPage() {
 
       {/* Open Positions Section */}
       <section className="py-20 md:py-32 bg-background relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
-        
+        <div className="absolute inset-0 bg-linear-to-br from-primary/5 via-transparent to-accent/5"></div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance text-white">
@@ -140,22 +146,23 @@ export default function CareersPage() {
             </CardContent>
           </Card>
         </div>
-        
+
         {/* Decorative divider */}
         <div className="absolute bottom-0 left-0 right-0 h-px divider-industrial"></div>
       </section>
 
       {/* Contact Section with Parallax */}
-      <section 
+      <section
         className="relative py-20 md:py-32 parallax-section"
         style={{
-          backgroundImage: 'url(/images/industrial-metallic-parallax-extension.jpg)',
+          backgroundImage:
+            'url(/images/industrial-metallic-parallax-extension.jpg)',
           backgroundPositionY: '50%',
         }}
       >
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/75"></div>
-        
+
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance text-white text-shadow-industrial">
             Stay Connected
