@@ -58,8 +58,14 @@ export const projects: Project[] = [
     capacity: 'Custom Sizes',
     status: 'Available Now',
     images: [
-      { src: '/services/prefab_buildings/building_day.jpeg', caption: 'Prefab building - daytime view' },
-      { src: '/services/prefab_buildings/building_night.jpeg', caption: 'Prefab building - nighttime view' },
+      {
+        src: '/services/prefab_buildings/building_day.jpeg',
+        caption: 'Prefab building - daytime view',
+      },
+      {
+        src: '/services/prefab_buildings/building_night.jpeg',
+        caption: 'Prefab building - nighttime view',
+      },
     ],
   },
   {
@@ -102,7 +108,10 @@ export const projects: Project[] = [
     capacity: 'High Volume',
     status: 'Operational',
     images: [
-      { src: '/services/cnc_laser_cutting/laser_cutting.jpeg', caption: 'CNC laser cutting in action' },
+      {
+        src: '/services/cnc_laser_cutting/laser_cutting.jpeg',
+        caption: 'CNC laser cutting in action',
+      },
     ],
   },
   {
@@ -124,9 +133,18 @@ export const projects: Project[] = [
     capacity: 'Any Quantity',
     status: 'Ready to Order',
     images: [
-      { src: '/services/booths/izb_front.jpeg', caption: 'IZB booth - front view' },
-      { src: '/services/booths/izb_right.jpeg', caption: 'IZB booth - side view' },
-      { src: '/services/booths/zanaco_many.jpeg', caption: 'Zanaco booth installation' },
+      {
+        src: '/services/booths/izb_front.jpeg',
+        caption: 'IZB booth - front view',
+      },
+      {
+        src: '/services/booths/izb_right.jpeg',
+        caption: 'IZB booth - side view',
+      },
+      {
+        src: '/services/booths/zanaco_many.jpeg',
+        caption: 'Zanaco booth installation',
+      },
     ],
   },
   {
@@ -167,9 +185,7 @@ export const projects: Project[] = [
     location: 'Workshop Based',
     capacity: 'Flexible',
     status: 'Always Available',
-    images: [
-      { src: '/services/metal_fabrication/metal_fabrication.jpeg' },
-    ],
+    images: [{ src: '/services/metal_fabrication/metal_fabrication.jpeg' }],
   },
   {
     id: 'food-trailers',
@@ -190,9 +206,18 @@ export const projects: Project[] = [
     capacity: 'Custom Orders',
     status: 'Available Now',
     images: [
-      { src: '/services/food_trailers/standard.jpeg', caption: 'Standard food trailer' },
-      { src: '/services/food_trailers/medium.jpeg', caption: 'Medium food trailer' },
-      { src: '/services/food_trailers/double_decker.jpeg', caption: 'Double-decker food trailer' },
+      {
+        src: '/services/food_trailers/standard.jpeg',
+        caption: 'Standard food trailer',
+      },
+      {
+        src: '/services/food_trailers/medium.jpeg',
+        caption: 'Medium food trailer',
+      },
+      {
+        src: '/services/food_trailers/double_decker.jpeg',
+        caption: 'Double-decker food trailer',
+      },
     ],
   },
   {
@@ -214,10 +239,22 @@ export const projects: Project[] = [
     capacity: 'Bulk Orders Available',
     status: 'In Stock',
     images: [
-      { src: '/services/foot_operated_stations/6_in_1_foot_operated_washing_station.jpeg', caption: '6-in-1 foot-operated washing station' },
-      { src: '/services/foot_operated_stations/foot_operated_station_at_sadc.jpeg', caption: 'Installation at SADC' },
-      { src: '/services/foot_operated_stations/nemchem.jpeg', caption: 'Nemchem installation' },
-      { src: '/services/foot_operated_stations/stainless_steel.jpeg', caption: 'Stainless steel model' },
+      {
+        src: '/services/foot_operated_stations/6_in_1_foot_operated_washing_station.jpeg',
+        caption: '6-in-1 foot-operated washing station',
+      },
+      {
+        src: '/services/foot_operated_stations/foot_operated_station_at_sadc.jpeg',
+        caption: 'Installation at SADC',
+      },
+      {
+        src: '/services/foot_operated_stations/nemchem.jpeg',
+        caption: 'Nemchem installation',
+      },
+      {
+        src: '/services/foot_operated_stations/stainless_steel.jpeg',
+        caption: 'Stainless steel model',
+      },
     ],
   },
   {
@@ -234,14 +271,24 @@ export const projects: Project[] = [
       'Portable and stationary options',
       'Custom designs on request',
     ],
-    impact: 'Bringing quality outdoor cooking equipment to homes and businesses',
+    impact:
+      'Bringing quality outdoor cooking equipment to homes and businesses',
     location: 'Nationwide Delivery',
     capacity: 'Any Quantity',
     status: 'Ready to Order',
     images: [
-      { src: '/services/smokers_and_brai_stands/smoker1.jpeg', caption: 'Smoker unit' },
-      { src: '/services/smokers_and_brai_stands/tall1.jpeg', caption: 'Tall smoker design' },
-      { src: '/services/smokers_and_brai_stands/brai_stand.jpeg', caption: 'Braai stand' },
+      {
+        src: '/services/smokers_and_brai_stands/smoker1.jpeg',
+        caption: 'Smoker unit',
+      },
+      {
+        src: '/services/smokers_and_brai_stands/tall1.jpeg',
+        caption: 'Tall smoker design',
+      },
+      {
+        src: '/services/smokers_and_brai_stands/brai_stand.jpeg',
+        caption: 'Braai stand',
+      },
     ],
   },
 ]
